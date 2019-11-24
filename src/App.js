@@ -2,6 +2,8 @@ import React, { PureComponent, Component } from "react";
 import { ScatterChart, Scatter} from 'recharts';
 import Chart from "react-apexcharts";
 import {PieChart, Pie, Sector, Cell,AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,} from 'recharts';
+import './App.css';
+
 
 const data4 = [
   {
@@ -108,7 +110,7 @@ class App extends Component {
               options={this.state.options1}
               series={this.state.series1}
               type="bar"
-              width="500"
+              width="300"
             />
           </div>
         </div>
@@ -118,7 +120,7 @@ class App extends Component {
         
         <div className="row">
           <div className="donut">
-            <Chart options={this.state.options2} series={this.state.series2} type="donut" width="380" />
+            <Chart options={this.state.options2} series={this.state.series2} type="donut" width="300" />
           </div>
         </div>
 
@@ -133,7 +135,7 @@ class App extends Component {
               options={this.state.options3}
               series={this.state.series3}
               type="line"
-              width="500"
+              width="300"
             />
           </div>
         </div>
@@ -142,8 +144,8 @@ class App extends Component {
         <div className="row">
 
         <AreaChart
-        width={500}
-        height={400}
+        width={300}
+        height={200}
         data={data4}
         margin={{
           top: 10, right: 30, left: 0, bottom: 0,
@@ -165,11 +167,11 @@ class App extends Component {
         </div>
 
         <div className="row">
-          <PieChart width={400} height={400}>
+          <PieChart width={300} height={200}>
         <Pie
           data={data5}
-          cx={200}
-          cy={200}
+          cx={100}
+          cy={100}
           labelLine={false}
           label={renderCustomizedLabel}
           outerRadius={80}
@@ -185,8 +187,8 @@ class App extends Component {
 
         <div className="row">
           <ScatterChart
-          width={400}
-          height={400}
+          width={300}
+          height={200}
           margin={{top: 20, right: 20, bottom: 20, left: 20,}}>
           <CartesianGrid />
           <XAxis type="number" dataKey="x" name="stature" unit="cm" />
