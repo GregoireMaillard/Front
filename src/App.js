@@ -11,13 +11,20 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
+        <a
+            className="App-link"
+            href="./App.js"
+            target="_blank"
+            rel="noopener noreferrer"
+          >PAGE 1
+          </a><br/>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="./App2.js"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            PAGE 2
           </a>
         </header>
       </div>
