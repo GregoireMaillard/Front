@@ -5,7 +5,7 @@ import {BrowserRouter as Router,Switch, Route, Link, useRouteMatch, useParams} f
 import {PieChart, Pie, Sector, Cell,AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,} from 'recharts';
 import './App.css';
 import Form from './Form.js'
-
+import FormAdmin from './FormAdmin.js'
 
 
 const data4 = [
@@ -195,6 +195,9 @@ export default function App() {
             <li>
               <Link to="/saisie">Saisie</Link>
             </li>
+			<li>
+              <Link to="/admin">Admin</Link>
+            </li>
           </ul>
         </nav>
         {/* A <Switch> looks through its children <Route>s and
@@ -202,6 +205,9 @@ export default function App() {
         <Switch>
           <Route path="/saisie">
             <Saisie />
+          </Route>
+		  <Route path="/admin">
+            <Admin />
           </Route>
           <Route path="/">
             <Dashboard />
@@ -213,13 +219,12 @@ export default function App() {
 }
 
 function Dashboard() {
-  return( 
-
-          <Ap></Ap>
-  
-  );
+  return <Ap></Ap>;
 }
 
 function Saisie() {
   return <Form></Form>;
+}
+function Admin() {
+  return <FormAdmin></FormAdmin>;
 }
